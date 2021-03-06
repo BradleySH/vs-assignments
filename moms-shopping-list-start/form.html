@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Mom's Shopping List </title>
+</head>
+<body>
+    <div class="title-header">
+        <h1 class="title">Mom's Shopping List</h1>
+    </div>
+    <div class="main">
+        <div class="add-item">
+            <h3 class="title">ADD ITEMS</h3>
+        </div>
+        <form name="addItem" id="add-todo">
+            <label class="label" for="title">Item name</label>
+            <input class="input" name="title" id="title" />
+            <button>submit</button>
+        </form>
+        <div class="todos">
+            <div class="list-item">
+                <h3 class="title">List of Items</h3>
+            </div>
+            <hr>
+            <ul id="list">
+                <li>
+                    <div>2 Pizzas</div>
+                    <button>edit</button>
+                    <button>X</button>
+                </li>
+                <li>
+                    <div>Wine</div>
+                    <button>edit</button>
+                    <button>X</button>
+                </li>
+                <li>
+                    <div>2 Pints of Ice Cream</div>
+                    <button>edit</button>
+                    <button>X</button>
+                </li>  
+                <hr>              
+            </ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>

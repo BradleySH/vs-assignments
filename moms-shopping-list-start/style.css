@@ -1,0 +1,57 @@
+.title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    background-color: rgb(129, 192, 192);
+    border-radius: 15px;
+    color:black;
+    
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
+.main {
+    border: 1px solid rgb(122, 122, 122);
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+}
+
+#add-item {
+    border: 1px solid black;
+    
+}
+
+.input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: rgb(252, 252, 252);
+}
+
+.label {
+    margin: 10px;
+    
+}
+
+#list {
+    flex-direction: column;
+    display: flex;
+    align-items: left;
+    
+}
+
+#list > li{
+    list-style-type: none;
+    margin: 10px auto;
+}
+
+#list div {
+    margin-bottom: 10px;
+    text-align: center;
+}
