@@ -62,7 +62,7 @@ while(mainPlayer.hp > 0){
                 //fight
                     let playerAttack = Math.floor(Math.random() * mainPlayer.attackDamage);
                     if(playerAttack >= 1){
-                        console.log("\n Striking " + enemy[newEnemy].name + " with your rusty sword you have casused " + playerAttack + " damage");
+                        console.log("\n Striking " + enemy[newEnemy].name + " with your rusty sword you have casused " + playerAttack + " damage " + enemy[newEnemy].speech) + " screams the enemy";
                         console.log(enemy[newEnemy].hp - playerAttack);
                         enemy[newEnemy].hp = enemy[newEnemy].hp - playerAttack
                     }
