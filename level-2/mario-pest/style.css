@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: red;
+    background-image: url(Mario2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+/*  Form Div */
+.pest-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+    padding: 10px;
+    font-weight: bolder;
+}
+form#goomba {
+    margin: 10px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+form#bombs {
+    margin: 10px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+form#cheep {
+    margin: 10px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+form#total-baddies {
+    margin: 10px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* header */
+.header{
+    margin-top: 10px;
+    display: flex;
+    justify-content:center;
+    font-family: 'Press Start 2P', cursive;
+    color: yellow;
+}
+
+/* Footer */
+footer{
+    margin-top: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 10px;
+    color: yellow;
+}
+
+/*  Forms */
+
+
+/* input series */
+input#goombaAmount.coinAmount {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: transparent;
+    color: yellow;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+input#bombAmount.coinAmount {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: transparent;
+    color: yellow;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+input#cheepAmount.coinAmount {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    background-color: transparent;
+    color: yellow;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+input#total {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    color:yellow;
+    font-size: 70px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+
+/* images */
+div#goomba.image {
+    content: url(https://img.icons8.com/cotton/64/000000/boletus-mashroom--v1.png);
+    width: 50px;
+    height:50px;
+    overflow:hidden;
+}
+div#bomb.image {
+    content: url(https://img.icons8.com/emoji/48/000000/bomb-emoji.png);
+    width: 50px;
+    height:50px;
+    overflow:hidden;
+}
+div#cheeps.image {
+    content: url(https://img.icons8.com/ios/50/000000/whole-fish.png);
+    width: 50px;
+    height:50px;
+    overflow:hidden;
+}
+/* buttons */
+button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+}

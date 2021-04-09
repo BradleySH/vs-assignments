@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Travel Form</title>
+</head>
+<body>
+    <h1>Travel Form</h1>
+    <form name="myForm">
+        <h3>Name Info</h3>
+        <input type="text" name="firstName" placeholder="First Name" id="first" required>
+        <input type="text" name="lastName" placeholder="Last Name" id="last" required>
+        <input type="number" name="age" placeholder="Age" id="age" required>
+        <br>
+        <h3>Gender Info</h3>
+         Male: <input type="radio" name="gender" value="Male">
+        Female: <input type="radio" name="gender" value="Female">
+        Prefer not to say: <input type="radio" name="gender" value="N/A">
+        <br>
+        <h3>Location</h3>
+        <select name="city">
+            <option value="New York City">NYC</option>
+            <option value="London">London</option>
+            <option value="Frankfurt">Frankfurt</option>
+            <option value="Nashville">Nashville</option>
+        </select>
+        <br>
+        <h3>Dietary Restrictions</h3>
+        <input type="checkbox" value="Vegan" name="diet">
+        <label for="vegan">Vegan</label>
+        <input type="checkbox" value="Nut Allergies" name="diet">
+        <label for="nuts">Nut Allergy</label>
+        <input type="checkbox" value="Gluten Free" name="diet">
+        <label for="gluten">Gluten Free</label>
+        <br>
+
+        <button>Submit</button>
+    </form>
+    
+    <script src="/travel.js"></script>
+</body>
+</html>

@@ -23,7 +23,7 @@ sub.addEventListener("submit", (event) => {
 
     const sub1 = sub.sub1.value
     const sub2 = sub.sub2.value
-    sub.sub1.value = ""
+    sub.sub1.value = "" 
     sub.sub2.value = ""
 
      const h3 = document.createElement("h3")
