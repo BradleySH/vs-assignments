@@ -1,0 +1,291 @@
+body {
+    margin:0;
+    padding: 0;
+    color: #325350;
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgba(128, 155, 126, .2);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(6, auto);
+    /* give the container display grid */
+    /* with six rows, 50px high */
+    /* default all cells/children on the left be 2/3 the screen width, and all on the left 1/3 */
+}
+.container > div {
+    border: 2px solid black;
+    
+}
+.header {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 250px;
+    background-image: url(/contours@2x.png), url(/gridlines.png), url(/huntington.jpg), url(/noise.png);
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+}
+.symbol {
+    opacity: .8;
+    height: 130px;
+    width:130px;
+    margin-left: 100px;
+    margin-top: 70px;
+}
+.header h1 {
+    margin-left: 50px;
+    margin-top: 80px;
+    font-size: 50px;
+    font-weight: 100;
+}
+.header p {
+    font-size: 25px;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: rgb(204, 204, 204);
+    padding: 20px;
+    margin-top:130px;
+    margin-left: -420px;
+    
+}
+.enlightenment h3,
+.about h3,
+.participation h3,
+.benefits h3,
+.requirements h3{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+.summary {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url(/contours@2x.png), url(/gridlines.png), url(/huntington.jpg), url(/noise.png);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.all-design {
+    color: rgb(204, 204, 204);
+    background-color: rgba(184, 187, 184, 0.3);
+    border: 1px rgb(95, 95, 95);
+    border-style: none;
+    padding: 10px 10px 10px 10px;
+    height: 50px;
+    width:150px;
+    font-family: 'Roboto Mono', monospace;
+}
+button.arrow {
+    color: rgb(204, 204, 204);
+    background-color: rgba(184, 187, 184, 0.3);
+    height: 50px;
+    width:50px;
+    border-style: none;
+    margin: 2px;
+    background-image: url(/chevron-right-solid.svg);
+    background-repeat: no-repeat;
+}
+
+.enlightenment {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 60px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 60px;
+    line-height: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    background-color: white;
+}
+.enlightenment p {
+    margin: 0;
+}
+.about {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 60px;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-right: 60px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    line-height: 25px;
+    background-color: white;
+}
+.participation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 60px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 60px;
+    line-height: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+}
+.benefits {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 60px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 60px;
+    line-height: 25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+}
+.participation,
+.benefits {
+    background-image: url(/bamboo.png);
+    background-blend-mode: screen;
+    background-color: rgba(128, 155, 126, .4);
+}
+.requirements {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    line-height: 25px;
+    font-weight: bolder;
+    font-family: 'Quicksand', sans-serif;
+}
+div.requirements > p:nth-child(2),
+div.requirements > p:nth-child(3),
+div.requirements > p:nth-child(4),
+div.requirements > p:nth-child(5){
+
+    padding-left: 60px;
+    padding-right: 50px;
+}
+.requirements h3 {
+    padding-left: 60px;
+    margin: 0;
+    padding-top: 30px;
+}
+.requirements .pre-footer {
+    height: 200px;
+    width: 100vw;
+    color: white;
+    line-height: 25px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(/koi.jpg), url(/gridlines.png);
+    font-size: 30px;
+
+}
+
+.authors {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: 'Roboto Mono', monospace;
+    font-stretch: semi-expanded;
+    height:100%;
+    width: 100%;
+    
+}
+.authors {
+    background-color: rgba(128, 155, 126, .2);
+    
+}
+.authors h4 {
+    letter-spacing: 1px;
+}
+.authors li {
+    list-style-type: none;
+
+}
+
+.links {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    line-height: 60px;
+    background-image: url(/bamboo.png);
+    background-color: rgba(128, 155, 126, 0.507);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+    color: rgb(189, 189, 189);
+}
+.links .info-links {
+    list-style-type: none;
+    color: rgb(204, 204, 204);
+    text-decoration: none;
+    background-color: none;
+}
+.links .info-links:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: none;
+}
+a {
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer {
+    /* make these span the width of the page */
+    background-color: #154242;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 900px){
+    /* use this media query to help these two cells drop to the bottom when screens are smaller */
+    .authors {
+        
+       
+    }
+    .links {
+
+    }
+    /* container could use some help so that it's children are full screen width */
+    .container {
+        
+    }
+}
+
+/* FLEX */
+/* use flexbox to make the icons behave like css zen garden's social icons */
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+.icons > div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.icons img:hover {
+    background-color: rgb(182, 182, 182);
+
+}

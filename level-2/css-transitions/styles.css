@@ -1,0 +1,17 @@
+#box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: cornflowerblue;
+    /* transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s; */
+    transition: background-color 1s linear 1s, width 1s linear;
+}
+
+#box:hover {
+    background-color: firebrick;
+    width: 300px;
+
+}

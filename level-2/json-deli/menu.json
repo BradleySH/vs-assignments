@@ -1,0 +1,53 @@
+
+
+{
+    "appetizers": [
+        {
+            "name": "hummus",
+            "ingredients": ["garbonzo beans", "salt", "spices"],
+            "description": "A delicious thick and creamy hummus made from fresh garbonzo beans"
+
+        },
+        {
+            "name": "nachos",
+            "ingredients":["flour tortilla", "cheese", "jalapenos"]
+        }
+    ],
+    "cold sandwiches":[
+        {
+            "name": "turkey sub",
+            "ingredients":["turkey", "cheese", "lettuce", "tomato"],
+            "description": "a cold cut sandwich with all the basics of a turkey sub sandwich"
+
+        }
+    ],
+    "hot sandwiches":[
+        {
+            "name": "cheeseburger",
+            "ingredients": ["meat", "cheese", "buns"],
+            "description": "A big juicy burger packed with flavor"
+
+        },
+        {
+            "name": "hotdog",
+            "ingredients":["pork", "other meat", "buns"],
+            "description": "grilled hotdogs with perfect grills marks and add a little BBQ sauce if wanted"
+        }
+    ],
+    "desserts":[
+        {
+            "name": "banana pudding",
+            "ingredients":["banana", "pudding", "wafers", "whipped cream"],
+            "description": "A rival to magnolia bakery, this homemade bana pudding will have you thinking about it for days"
+
+        }
+    ],
+    "drinks":[
+        {
+            "name": "coke",
+            "ingredients":["sugar", "syrup", "carbonated water"],
+            "description": "A very bad drink but tastes so good"
+
+        }
+    ]
+}
