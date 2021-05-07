@@ -1,0 +1,33 @@
+.todo-list {
+    background-color: darkgrey;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    background-color: rgb(50, 118, 163);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input {
+    background-color: rgb(236, 236, 236);
+    border: 1px solid black;
+    padding: 15px 32px;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
