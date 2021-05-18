@@ -1,0 +1,76 @@
+.dice-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+  
+  .diceface1 {
+      grid-column: 1/1;
+      grid-row: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dice {
+    padding: 4px;
+    background-color: rgb(219, 43, 37);
+    width: 104px;
+    height: 104px;
+    border-radius: 10%;
+    margin-right : 10px;
+  }
+  .dot{
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color:white;
+  }
+  
+  .diceface2{
+      grid-column: 1/1;
+      grid-row: 1/1;
+    display: flex ;
+    justify-content: space-between;
+  }
+  
+  .diceface2 .dot:nth-of-type(2) {
+    align-self: flex-end;
+  }
+  
+  .diceface3 {
+      grid-column: 1/1;
+      grid-row: 1/1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .diceface3 .dot:nth-of-type(1) {
+    align-self :flex-end;
+  }
+  
+  .diceface3 .dot:nth-of-type(2) {
+    align-self :center;
+  }
+  
+  
+  .diceface4 , .diceface6, .diceface5{
+    grid-column: 1/1;
+    grid-row: 1/1;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .diceface4 .column , .diceface6 .column, .diceface5 .column{
+    grid-column: 1/1;
+    grid-row: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .diceface5 .column:nth-of-type(2) {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    justify-content: center;
+  }

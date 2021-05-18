@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+.App {
+  display: flex;
+  align-items: center;
+}
+
+body { 
+  font-family: sans-serif;
+  color:red;
+}
+
+/* //styling for Scene */
+.scene {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  perspective:600px;
+}
+
+.rollBtn{
+  background:black;
+  color:white;
+  border:none;
+  margin:auto 0;
+  font-size:1.5em;
+  margin-top:1em;
+  width:200px;
+}
+
+/* //styling for 3D Cube */
+.cube {
+  width:200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 1s;
+}
+
+/* //styling for 3D Cube transforms / animations on face select (on roll) */
+.cube.show-1  { 
+  transform: translateZ(-100px) rotateY(   0deg); 
+}
+.cube.show-2  { 
+  transform: translateZ(-100px) rotateY(-180deg);
+}
+.cube.show-3  { 
+  transform: translateZ(-100px) rotateY( -90deg); 
+}
+.cube.show-4   { 
+  transform: translateZ(-100px) rotateY(  90deg); 
+}
+.cube.show-5   { 
+  transform: translateZ(-100px) rotateX( -90deg); 
+}
+.cube.show-6 { 
+  transform: translateZ(-100px) rotateX(  90deg); 
+}
+
+/* //universal style for cube faces  */
+.num1, .num2, .num3, .num4, .num5, .num6 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 4px solid white;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* //individual styling for each numbers face  */
+.num1  { background: red;  opacity: 0.75;}
+.num2  { background: red;   opacity: 0.75; }
+.num3  {  background: red;   opacity: 0.75; }
+.num4  {  background: red;   opacity: 0.75; }
+.num5  {  background: red;   opacity: 0.75; }
+.num6  {  background: red;  opacity: 0.75; }
+
+.num1   { transform: rotateY(  0deg) translateZ(100px); }
+.num2   { transform: rotateY(180deg) translateZ(100px); }
+.num3   { transform: rotateY( 90deg) translateZ(100px); }
+.num4   { transform: rotateY(-90deg) translateZ(100px); }
+.num5   { transform: rotateX( 90deg) translateZ(100px); }
+.num6   { transform: rotateX(-90deg) translateZ(100px); }
+
+label { margin-right: 10px; }
