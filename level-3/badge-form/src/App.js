@@ -34,28 +34,63 @@ class App extends Component {
   }
   handleSubmit(event){
     event.preventDefault()
-    this.setState(prevState => ({
-      ...prevState,
-      [event.target.state]: event.target.value
+    // this.setState(prevState => ({
+    //   ...prevState,
+    //   [event.target.state]: event.target.value
       
 
-    }))
-    let badgeEntries = this.state.slice(0, 7)
-    badgeEntries.push(this.state)
-    this.setState({
-      firstName:"", 
+    // }))
+    this.setState((prevState) => {
+      return {
+        firstName:"", 
       lastName: "",
       email: "",
       birthLocation: "",
       phone: "",
       favFood: "",
       textarea: "",
-      value: ""
+      value: "",
+      badgeEntries: [...prevState.badgeEntries, {
+        firstName: prevState.firstName,
+        lastName: prevState.lastName,
+        email: prevState.email,
+        birthLocation: prevState.birthLocation,
+        phone: prevState.phone,
+        favFood: prevState.favFood,
+        textarea: prevState.textarea,
+        value: prevState.value}]
+      }
     })
+
+    // let badgeEntries = this.state.slice(0, 7)
+    // badgeEntries.push(this.state)
+    // this.setState((prevState) => {
+    // return
+    // {
+    //   firstName:"", 
+    //   lastName: "",
+    //   email: "",
+    //   birthLocation: "",
+    //   phone: "",
+    //   favFood: "",
+    //   textarea: "",
+    //   value: "",
+    //   badgeEntries: [...prevState.badgeEntries, {
+    //     firstName: prevState.firstName,
+    //     lastName: prevState.lastName,
+    //     email: prevState.email,
+    //     birthLocation: prevState.birthLocation,
+    //     phone: prevState.phone,
+    //     favFood: prevState.favFood,
+    //     textarea: prevState.textarea,
+    //     value: prevState.value
+    //   }]
+    // }})
 
   }
 
   render() { 
+    const mappedBadges = this.state.badgeEntries.map(badge => <Badges key={Math.random()*100} {...badge} />)
     //const newitems = item => {<Badges }
     return ( 
       <div className="form-container">
@@ -135,6 +170,7 @@ class App extends Component {
                 textarea={this.state.textarea}
             />}
         </li>
+        {mappedBadges}
       </ol>
       </div>
       </div>
