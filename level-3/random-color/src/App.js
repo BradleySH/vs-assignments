@@ -1,4 +1,8 @@
 import React, {Component} from "react"
+import Box from "./Box"
+import axios from "axios"
+import "./style.css"
+
 
 class App extends Component {
   constructor() {
@@ -8,30 +12,33 @@ class App extends Component {
 
 
      }
-     this.handleClick = this.handleClick.bind(this)
+     //this.handleClick = this.handleClick.bind(this)
   }
 
 componentDidMount(){
   axios.get(`https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
-      .then(response => {
+      .then(res => {
         this.setState({
-          colorArray: response.data.color
+          colorArray: res.data.new_color
         })
-        console.log(response.data.color);
+        console.log(res.data);
       })
-}
-handleClick(event){
-  event.preventDefault()
-  this.setState({
-    colorArray: this.state.color
-  })
-}
+
+}     
+// handleClick(event){
+//   event.preventDefault()
+//   this.setState({
+//     colorArray: this.state.color
+//   })
+// }
 
   render() { 
+    console.log(this.state);
     return ( 
       <div>
+        <Box />
+      </div>,
         <button onClick={this.handleClick}>Change Color</button>
-      </div>
 
      );
   }

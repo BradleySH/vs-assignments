@@ -16,31 +16,44 @@ class App extends Component {
         .then(res => res.json())
         .then(data => {
           this.setState({
-            image: data[1].image,
-            name: data[1].name
-            // name: data,
-            // image: data,
-            // targets: [data]
+             image: data[0].image,
+             name: data[0].name,
+              // name: data.name,
+              // image: data.image,
+             targets: [data]
  
           })
           console.log(data);
         })
         
-  }
+      }
+    toBeWhacked(){
+      const whacked = [];
+      for(let i= 0; i < this.state.targets.length; i++){
+        let image = `${this.state.targets[i].image}`
+        let name = `${this.state.targets[i].name}`
+        whacked.push(<HitList image={image} name={name}/>)
+      }
+      return whacked
+    }
+  
 
 
   render() { 
-  
-      const targetArray = this.state.targets.map((name, image) => <div>{this.state.name}{this.state.image}</div>)
-    return ( 
+    console.log(this.state)
+      const targetArray = this.state.targets.map(item => <HitList name={this.state.name} image={this.state.image}{...item}/>)
+      console.log(targetArray)
+    return (
       <div>
-
+        {this.toBeWhacked()}
+      </div>,
+      <div>
         <HitList  
             name={this.state.name} 
             image={this.state.image} 
         />
-        {targetArray}
       </div>
+      // <div>{targetArray}</div>
 
      );
   }
