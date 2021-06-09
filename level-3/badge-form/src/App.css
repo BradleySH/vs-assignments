@@ -1,0 +1,44 @@
+/* .form-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+} */
+.entry-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    padding: 10px;
+    border: 1px solid black;
+}
+input.firstName{
+    margin:20px;
+
+}
+input.lastName{
+    margin:20px;
+
+}
+input.email{
+    margin:20px;
+
+}
+input.birthLocation{
+    margin:20px;
+
+}
+input.favFood{
+    margin:20px;
+
+}
+input.phone{
+    margin:20px;
+
+}
+input.textarea{
+    margin:20px;
+
+}

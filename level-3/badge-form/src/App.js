@@ -95,6 +95,7 @@ class App extends Component {
     return ( 
       <div className="form-container">
       <form onSubmit={this.handleSubmit} className="entry-form">
+        <div>First Name:
         <input 
             className="firstName"
             type="text"
@@ -104,7 +105,9 @@ class App extends Component {
             onChange={this.handleChange}
             required
         />
+        </div>
         <br />
+        <div>Last Name:
         <input 
             className="lastName"
             type="text"
@@ -114,7 +117,9 @@ class App extends Component {
             onChange={this.handleChange}
             required
           />
+          </div>
           <br />
+          <div>E-mail:
           <input 
               className="email"
               type="email"
@@ -124,7 +129,9 @@ class App extends Component {
               onChange={this.handleChange}
               required
           />
+          </div>
           <br />
+          <div>Place of Birth:
           <input 
               className="birthLocation"
               type="text"
@@ -134,18 +141,22 @@ class App extends Component {
               onChange={this.handleChange}
               required
           />
+          </div>
           <br />
+          <div>Phone:
           <input 
               className="phone"
               type="tel"
               name="phone"
-              placeholder="Phone"
+              placeholder="Phone# XXXXXXXXXX"
               value={this.state.phone}
               pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
               onChange={this.handleChange}
               required
           />
+          </div>
           <br />
+          <div>Favorite Food:
           <input 
               className="fav-food"
               placeholder="Favorite Food"
@@ -154,8 +165,13 @@ class App extends Component {
               value={this.state.favFood}
               onChange={this.handleChange}
           />
+          </div>
+          <div>Write Here:
           <textarea placeholder="Tell us about yourself" value={this.state.textarea} onChange={this.handleChange} name="textarea" />
+          </div>
+          <div>
           <button className="btn" type="submit" onSubmit={this.handleSubmit}>Submit</button>
+          </div>
 
       </form>
       <div className="submitted-container">

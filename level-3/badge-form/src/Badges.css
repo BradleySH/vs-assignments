@@ -1,7 +1,13 @@
-/* .badge-container {
-    margin: 0;
+.badge-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    padding: 10px;
     border: 1px solid black;
-    border-radius: 5px;
 
 }
 .header {
@@ -12,29 +18,28 @@
 .header h2{
     margin:0;
     background-color: darkgray;
-   border-radius: 5px;
+   
 }
 
 .textarea {
     border: 1px solid black;
     height: 250px;
-    width: 700px;
-   margin-left: 12%;
+    width: 300px;
+   
 }
-.name,
+/* .name,
 .birthLocation,
 .email{
     margin-left: 100px;
 }
-.phone{
+/* .phone{
    float: right;
    margin-top: -210px;
    margin-right: 200px;
   
-}
-.favFood{
+} */
+/* .favFood{
     float: right;
    margin-top: -157px;
    margin-right: 200px;
-
-} */
+ */ 

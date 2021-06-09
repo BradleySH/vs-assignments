@@ -2,6 +2,7 @@ import React from "react"
 import friends from "../FriendsData"
 //import FriendsList from "./FriendsList"
 import Pets from "./Pets"
+import "./style.css"
 
 function Friends(props) {
     console.log(props.pets);
@@ -11,6 +12,7 @@ function Friends(props) {
         <div className="friend-name">
             <h1>Name: {props.name} </h1>
             <h2>Age: {props.age}</h2>
+            {petInfo}
              
         
 
