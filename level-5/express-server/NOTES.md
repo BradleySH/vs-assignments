@@ -64,3 +64,18 @@
 # Express Router - Enables to modularize our routes in express
 
 # modular file organization - 
+
+# URL Parameters
+    # Parts of a URL
+    * Base - http://amazon.com
+    * Endpoint - http://amazon.com/images
+    * Parameters - http://images/9709470wnt40
+    * Query - 
+
+# Parameters
+
+# URL Queries
+# Query String - (typically to filter results)
+* Begins with the "?"
+* Built of key=value pairs.
+* Multiple queries separated by the "&"

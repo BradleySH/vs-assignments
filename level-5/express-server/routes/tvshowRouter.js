@@ -1,3 +1,4 @@
+const { request, response } = require("express");
 const express = require("express")
 const tvshowRouter = express.Router()
 const { v4: uuidv4 } = require('uuid');
@@ -12,6 +13,12 @@ const tvShows = [
 
 tvshowRouter.get("/", (request, response) => {
     response.send(tvShows)
+})
+
+tvshowRouter.get("/:tvshowId", (request, response) => {
+    const tvshowId = request.params.tvshowId
+    const foundShow = tvShows.find(tvshow => tvshow._id === tvshowId)
+    response.send(foundShow)
 })
 
 tvshowRouter.post("/", (request, response) => {
