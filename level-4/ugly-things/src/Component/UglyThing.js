@@ -1,42 +1,43 @@
 import React from 'react'
-import DeleteButton from '../ButtonComponent/DeleteButton'
-import EditButton from "../ButtonComponent/EditButton"
+// import DeleteButton from '../ButtonComponent/DeleteButton'
+// import EditButton from "../ButtonComponent/EditButton"
 import {UglyContextConsumer} from "../UglyContext"
 
 function UglyThing(props){
-    const isEditing = false
+    //const [editForm, setEditForm] = {title: "", imgUrl: "", description: ""}
+    console.log(props.item.isEditing)
     return (
-        isEditing === true ?
+        props.item.isEditing === true ?
         <div>
             <UglyContextConsumer>
         {context =>  {
           return (
-          <form onSubmit={context.handleEdit}>
+          <form onSubmit={(e) => context.submitEdit(e, props.item._id, {title: context.editTitle, imgUrl: context.editImgUrl, description: context.editDescription})}>
             <div className="inputs">
             <input 
                 type="text"
-                name="title"
+                name="editTitle"
                 placeholder="Title"
-                value={context.title}
+                value={context.editTitle}
                 onChange={context.handleChange}
               />
             <input 
                 type="imgUrl"
-                name="imgUrl"
+                name="editImgUrl"
                 placeholder="Image"
-                value={context.imgUrl}
+                value={context.editImgUrl}
                 onChange={context.handleChange}
               />
             <input 
                 type="text"
-                name="description"
+                name="editDescription"
                 placeholder="Description"
-                value={context.description}
+                value={context.editDescription}
                 onChange={context.handleChange}
               />
         </div>
         <div className="btn">
-            <button type="submit">Submit</button>
+            <button type="submit">Update Edit</button>
         </div>  
           </form>)}}
     </UglyContextConsumer>
@@ -52,7 +53,7 @@ function UglyThing(props){
                 {context => (
                     <div>
                         <button onClick={() => context.handleDelete(props.item._id)}>Delete</button>
-                        <button onClick={() => context.handleEdit(props.item._id)} value={{isEditing: true}}>Edit</button>
+                        <button onClick={() => context.takeToEdit(props.item._id)}>Edit</button>
                     </div>
                     
                 )}

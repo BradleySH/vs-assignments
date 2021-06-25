@@ -1,1 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+.nav-bar {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    height: 50px;
+    background-color: dodgerblue;
+    
+    
+}
+.nav-bar a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+
+}
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+body{
+    background-color: lightgray;
+}
+.wrapper-home{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+img {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+.textarea-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+footer {
+    height: 50px;
+    background-color: dodgerblue;
+}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding-top: 15px;
+}
+
+.about-container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.about-header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+
+}
+.about1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+about2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+.mario {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+}
+.sh{
+   padding: 10px;
+}

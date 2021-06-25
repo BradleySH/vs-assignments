@@ -1,0 +1,26 @@
+// First Express server 
+
+const express = require("express")
+const app = express()
+const { v4: uuidv4 } = require('uuid');
+
+// Middleware (for every request)
+app.use(express.json()) //looks for a request body and turns it into a req.body
+
+// fake data
+
+
+
+
+    //1. Endpoint (mount path)
+    //2. Callback function
+
+app.use("/movies", require("./routes/movieRouter"))
+app.use("/tvshows", require("./routes/tvshowRouter"))
+
+
+
+        // 1: PORT   2: Callback
+app.listen(9000, () => {
+    console.log("Server is running on Port 9000");
+})

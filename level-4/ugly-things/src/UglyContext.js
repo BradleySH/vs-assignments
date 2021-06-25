@@ -7,7 +7,12 @@ class UglyContextProvider extends Component {
     state = { 
         title: "",
         imgUrl: "",
-        description: "", 
+        description: "",
+        isEditing: true, 
+        updateEdit: "",
+        editTitle: "",
+        editImgUrl: "",
+        editDescription: "",
         imgArr: []
        }
 
@@ -46,7 +51,7 @@ class UglyContextProvider extends Component {
          axios.get("https://api.vschool.io/bradhorlander/thing/")
          .then(res => {
              this.setState({
-                 imgArr: res.data
+                 imgArr: res.data.map(item => {return {...item, isEditing: false}})
              })
              console.log(this.state.imgArr);
          })
@@ -72,23 +77,47 @@ class UglyContextProvider extends Component {
 
      }
 
-     handleEdit = (_id) => {
+     submitEdit = (e, _id, post) => {
+         e.preventDefault()
          //put request
-         axios.put(`https://api.vschool.io/bradhorlander/thing/${_id}`)
+         console.log("Submitted edits!")
+         axios.put(`https://api.vschool.io/bradhorlander/thing/${_id}`, post)
             .then(res => {
                 // .get  or turnary 
-                this.setState({
-                    title: "",
-                    imgUrl: "",
-                    description: ""
+                this.setState(prevState => {
+                    const newImgArr = prevState.imgArr.map(item => item._id === _id ? {...post, isEditing: false} : item)
+                    console.log(newImgArr);
+                    return {
+                        imgArr: newImgArr
+            
+                    }
                 })
             })
             .catch(err => console.log(err))
 
-                //unknown how to edit
+                // unknown how to edit
                 // this.setState({ imgArr: this.imgArr.push(item => item???) })
-            
+     }
+     
 
+
+     takeToEdit = (_id) => {
+            // e.preventDefault()
+            // const newUglyThing= {
+            //     "title": this.state.title,
+            //     "description": this.state.description,
+            //     "imgUrl": this.state.imgUrl
+            // }
+            // this.setState({
+            //     isEditing: false
+            // })
+            let selectedUglyThing = this.state.imgArr.find(item => item._id === _id)
+            console.log(_id)
+            console.log(selectedUglyThing)
+            selectedUglyThing.isEditing = true
+            let newImgArr = this.state.imgArr.map( item => item._id === selectedUglyThing._id? selectedUglyThing: item )
+            this.setState({imgArr: newImgArr})
+            console.log("Switched to Editing Mode!")
      }
 
 
@@ -96,14 +125,18 @@ class UglyContextProvider extends Component {
         return ( 
             <Provider value={{
                 handleDelete: this.handleDelete,
-                handleEdit: this.handleEdit,
+                submitEdit: this.submitEdit,
                 // postImage: this.postImage,
                 imgArr: this.state.imgArr,
                 handleSubmit: this.handleSubmit,
                 handleChange: this.handleChange,
                 title: this.state.title,
                 imgUrl: this.state.imgUrl,
-                description: this.state.description
+                description: this.state.description,
+                takeToEdit: this.takeToEdit,
+                editTitle: this.state.editTitle,
+                editImgUrl: this.state.editImgUrl,
+                editDescription: this.state.editDescription
             }}>
                 {this.props.children}
             </Provider>

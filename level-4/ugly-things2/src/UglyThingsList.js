@@ -5,7 +5,7 @@ import UglyThing from "./UglyThing"
 
 function UglyThingsList() {
     const context = useContext(UglyThingsContext)
-    const list = context.uglyThingsList.map((item, index) => <UglyThing key={index} {...item}/>)
+    const list = context.uglyThingsList.map((item, index) => <UglyThing key={index} item={item}/>)
     return (
         <div>
             {list}

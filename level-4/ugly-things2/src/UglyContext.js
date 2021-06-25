@@ -25,7 +25,10 @@ function UglyThingsContextProvider(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
         setUglyThingsList(prevList => ([
-            {title: uglyThing.title, desc: uglyThing.desc, imgUrl: uglyThing.imgUrl}, ...prevList
+            {   title: uglyThing.title,
+                imgUrl: uglyThing.imgUrl,
+                desc: uglyThing.desc
+            }, ...prevList
         ]))
         setUglyThing(initUglyItem)
 
