@@ -38,6 +38,20 @@ movieRouter.post("/", (request, response) => {
 
 })
 
+movieRouter.delete("/:movieId", (request, response) => {
+    const movieId = request.params.movieId
+    const movieIndex = movies.findIndex(movie => movie._id === movieId)
+    movies.splice(movieIndex, 1)
+    response.send("Successfully deleted movie")
+})
+
+movieRouter.put("/:movieId", (request, response) => {
+    const movieId = request.params.movieId
+    const updateObject = request.body
+    const movieIndex = movies.findIndex(movie => movie._id === movieId)
+    const updateMovie = Object.assign(movies[movieIndex], updateObject)
+    response.send(updateMovie)
+})
 
 
 
