@@ -79,3 +79,16 @@
 * Begins with the "?"
 * Built of key=value pairs.
 * Multiple queries separated by the "&"
+
+-------------------------------------------------------------
+
+# Middleware
+
+    # What is it?
+    app.use()
+    1. (optional) - mount path (endpoint)
+    2. Callback function - recieves the request, response objects, also the "next" function
+
+    # The "next" function
+         moves on to the next middleware on the server
+

@@ -1,11 +1,16 @@
 // First Express server 
 
+const { request, response } = require("express");
 const express = require("express")
 const app = express()
 const { v4: uuidv4 } = require('uuid');
 
+
+
 // Middleware (for every request)
 app.use(express.json()) //looks for a request body and turns it into a req.body
+
+
 
 // fake data
 
