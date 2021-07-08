@@ -92,3 +92,32 @@
     # The "next" function
          moves on to the next middleware on the server
 
+
+
+     # Console Errors in Express 
+
+     # Use A Logger
+     * npm install morgan   
+
+
+
+# Comnnecting the front end to the back end
+
+    # Folder Structure
+    # Proxy
+
+# Introduction to Mongoose
+    # npm install mongoose
+
+    # Purpose
+        * Create models
+        * Query Data
+
+    # Connect
+
+# Mongoose Schemas
+    *Blueprints for our data
+
+#Mongoose Models
+    * Models have a Name, and a Blueprint(Schema)
+    *Models are used to perform the CRUD operations on data created with the model

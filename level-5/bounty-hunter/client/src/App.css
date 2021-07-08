@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  
+}
+
+.video-background {
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+.bounty-container {
+  color: whitesmoke;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bounty{
+  color:whitesmoke;
+  background-color: rgba(104, 104, 104, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  width: 600px;
+  font-size: 12px;
+  
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width:200px;
+  padding: 10px;
+  margin-top: 100px;
+  margin-left: 25px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-background {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    object-fit: cover;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-background {
+    width: auto;
+    height: 100%;
+    position: fixed;
+    object-fit:fill;
+  }
+}
+
+.deleteBtn {
+  border: none;
+  color:whitesmoke;
+  width: 100px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50px;
+
+}
+.editBtn{
+  border: none;
+  color: whitesmoke;
+  width: 100px;
+  height: 25px;
+  background-color: blue;
+  border-radius: 50px;
+
+}
+h1{
+  margin-left: 25px;
+}
+
+.bounty h3, h4, p, button {
+  margin-left: 20px;
+  align-items: center;
+}
+
+.filter-form{
+  width: 200px;
+  margin-left: 25px;
+}
+.filter-title{
+  margin-left: 25px;
+  
+}

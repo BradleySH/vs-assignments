@@ -75,3 +75,11 @@
     * Query - 
 
 # Parameters
+
+# statuscodes
+
+    * 200 - successful request
+    * 201 - successful insert / successful update like a post request
+    * 401 - unauthorized
+    * 404 - not found
+    * 500 - server error
